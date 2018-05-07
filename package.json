@@ -2,6 +2,7 @@
   "name": "react-clustergrammer",
   "version": "1.0.0",
   "description": "React wrapper for clustergrammer",
+  "homepage": "https://hobincar.github.io/react-clustergrammer",
   "author": "hobincar",
   "license": "MIT",
   "repository": "hobincar/react-clustergrammer",
