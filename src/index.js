@@ -250,7 +250,7 @@ export default class Clustergrammer extends Component {
     height: 500,
   };
 
-  drawClustergrammer = () => {
+  draw = () => {
     const { width, height, ...clustergrammerProps } = this.props;
     _Clustergrammer({
       ...clustergrammerProps,
@@ -277,11 +277,7 @@ export default class Clustergrammer extends Component {
       }
     `;
 
-    this.drawClustergrammer();
-  }
-
-  componentDidUpdate() {
-    this.drawClustergrammer();
+    this.draw();
   }
 
   componentWillUnmount() {
@@ -292,7 +288,10 @@ export default class Clustergrammer extends Component {
     const { width, height } = this.props;
 
     return (
-      <Box id='react-clustergrammer-box' style={{ width: `${width}px`, height: `${height}px` }} />
+      <Box
+        id='react-clustergrammer-box'
+        style={{ width: `${width}px`, height: `${height}px` }}
+      />
     )
   }
 }
