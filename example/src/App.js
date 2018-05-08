@@ -11,21 +11,21 @@ export default class App extends Component {
     return (
       <Clustergrammer
         network_data={{
-          'row_nodes': Array(nRow).fill(0).map((_, i) => ({
+          row_nodes: Array(nRow).fill(0).map((_, i) => ({
             name: `ROW-${i}`,
             clust: parseInt(Math.random()*nCluster),
             rank: parseInt(Math.random()*10),
             rankvar: parseInt(Math.random()*10),
             group: [],
           })),
-          'col_nodes': Array(nCol).fill(0).map((_, i) => ({
+          col_nodes: Array(nCol).fill(0).map((_, i) => ({
             name: `COL-${i}`,
             clust: parseInt(Math.random()*nCluster),
             rank: parseInt(Math.random()*10),
             rankvar: parseInt(Math.random()*10),
             group: [],
           })),
-          'links': Array(nLink).fill(0).map(_ => ({
+          links: Array(nLink).fill(0).map(_ => ({
             source: parseInt(Math.random()*nRow),
             target: parseInt(Math.random()*nCol),
             value: Math.random() * 2 - 1,
