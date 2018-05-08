@@ -4,7 +4,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled, { injectGlobal } from 'styled-components';
+import styled from 'styled-components';
 import _Clustergrammer from './clustergrammer';
 require('bootstrap/dist/css/bootstrap.min.css');
 require('font-awesome/css/font-awesome.min.css');
@@ -12,6 +12,22 @@ require('font-awesome/css/font-awesome.min.css');
 const Box = styled.div`
   * {
   -webkit-box-sizing: border-box;
+  }
+
+  body:not(&) .d3-tip {
+    line-height: 1.25;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    max-width: 500px;
+  }
+
+  body:not(&) .d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
   }
 
   body{
@@ -256,32 +272,6 @@ export default class Clustergrammer extends Component {
       ...clustergrammerProps,
       root: '#react-clustergrammer-box',
     });
-  }
-
-  componentDidMount() {
-    this.globals = injectGlobal`
-      .d3-tip {
-        line-height: 1.25;
-        font-weight: bold;
-        padding: 12px;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        border-radius: 2px;
-        max-width: 500px;
-      }
-    
-      .d3-tip.n:after {
-        margin: -1px 0 0 0;
-        top: 100%;
-        left: 0;
-      }
-    `;
-
-    this.draw();
-  }
-
-  componentWillUnmount() {
-    this.globals.remove()
   }
 
   render() {
