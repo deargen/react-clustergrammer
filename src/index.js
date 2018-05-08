@@ -274,6 +274,10 @@ export default class Clustergrammer extends Component {
     });
   }
 
+  componentDidMount() {
+    this.draw();
+  }
+
   render() {
     const { width, height } = this.props;
 
