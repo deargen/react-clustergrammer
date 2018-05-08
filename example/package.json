@@ -5,6 +5,8 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.7.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-clustergrammer": "link:..",
