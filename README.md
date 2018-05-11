@@ -5,7 +5,7 @@
 [![NPM](https://img.shields.io/npm/v/react-clustergrammer.svg)](https://www.npmjs.com/package/react-clustergrammer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Demo
-https://hobincar.github.io/react-clustergrammer/
+https://deargen.github.io/react-clustergrammer/
 
 ## Dependencies
 * bootstrap@3.3.6
