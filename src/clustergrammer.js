@@ -14268,10 +14268,15 @@ const Clustergrammer =
 	  var network_data = params.network_data;
 
 	  var matrix = [];
+	  var clust_container;
 	  var clust_group;
 
 	  // append a group that will hold clust_group and position it once
-	  clust_group = svg_elem.append('g').attr('class', 'clust_container').attr('transform', 'translate(' + params.viz.clust.margin.left + ',' + params.viz.clust.margin.top + ')').append('g').attr('class', 'clust_group').classed('clust_group', true);
+	  clust_container = svg_elem.append('g').attr('class', 'clust_container').attr('transform', 'translate(' + params.viz.clust.margin.left + ',' + params.viz.clust.margin.top + ')');
+	  clust_group = clust_container.append('g').attr('class', 'clust_group').attr('clip-path', 'url(#clip-plot)').classed('clust_group', true);
+
+	  // clustergram clip path
+	  clust_container.append('clipPath').attr('id', 'clip-plot').append('rect').attr('width', params.viz.clust.dim.width).attr('height', params.viz.clust.dim.height);
 
 	  // clustergram background rect
 	  clust_group.append('rect').classed('background', true).classed('grey_background', true).style('fill', '#eee').style('opacity', 0.25).attr('width', params.viz.clust.dim.width).attr('height', params.viz.clust.dim.height);
