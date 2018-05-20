@@ -14275,9 +14275,6 @@ const Clustergrammer =
 	  clust_container = svg_elem.append('g').attr('class', 'clust_container').attr('transform', 'translate(' + params.viz.clust.margin.left + ',' + params.viz.clust.margin.top + ')');
 	  clust_group = clust_container.append('g').attr('class', 'clust_group');
 
-	  // clustergram clip path
-	  clust_container.attr('clip-path', 'url(#clip-plot)').classed('clust_group', true).append('clipPath').attr('id', 'clip-plot').append('rect').attr('width', params.viz.clust.dim.width).attr('height', params.viz.clust.dim.height);
-
 	  // clustergram background rect
 	  clust_group.append('rect').classed('background', true).classed('grey_background', true).style('fill', '#eee').style('opacity', 0.25).attr('width', params.viz.clust.dim.width).attr('height', params.viz.clust.dim.height);
 
