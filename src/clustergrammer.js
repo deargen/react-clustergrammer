@@ -2167,7 +2167,7 @@ const Clustergrammer =
 	      left: 0,
 	      right: 0
 	    },
-	    ini_expand: false,
+	    ini_expand: true,
 	    grey_border_width: 2,
 	    tile_click_hlight: false,
 	    super_label_scale: 1,
@@ -6466,7 +6466,7 @@ const Clustergrammer =
 	 */
 	exports.escape = function (value) {
 	  var text = String(value);
-	  text = text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	  text = text.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/#/g, '&#35;');
 
 	  return text;
 	};
