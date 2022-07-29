@@ -2,9 +2,9 @@
  * @class Clustergrammer
  */
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import _Clustergrammer from './clustergrammer';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import _Clustergrammer from "./clustergrammer";
 
 export default class Clustergrammer extends Component {
   static propTypes = {
@@ -21,9 +21,9 @@ export default class Clustergrammer extends Component {
     const { width, height, ...clustergrammerProps } = this.props;
     _Clustergrammer({
       ...clustergrammerProps,
-      root: '#react-clustergrammer-box',
+      root: "#react-clustergrammer-box",
     });
-  }
+  };
 
   componentDidMount() {
     this.draw();
@@ -34,9 +34,9 @@ export default class Clustergrammer extends Component {
 
     return (
       <div
-        id='react-clustergrammer-box'
+        id="react-clustergrammer-box"
         style={{ width: `${width}px`, height: `${height}px` }}
       />
-    )
+    );
   }
 }
